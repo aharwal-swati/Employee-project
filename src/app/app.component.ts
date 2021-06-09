@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import{TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +7,10 @@ import{TranslateService} from '@ngx-translate/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-project';
-  languageCode:string;
+  title = 'employee-project';
 
-  constructor(private translate:TranslateService,private router:Router)
+  constructor(private router:Router)
   {
-    this.router.navigate(['/student']);
-    this.languageCode=localStorage.getItem("language")
-    console.log(this.languageCode)
-    this.translate.use(this.languageCode);
+    this.router.navigate(['/employee/employee-list']);
   }
 }

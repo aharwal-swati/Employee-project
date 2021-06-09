@@ -1,0 +1,27 @@
+.full-width-table {
+  width: 100%;
+}
+
+.table-layout{
+  padding: 40px;
+}
+
+mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  border-bottom-color: rgba(0,0,0,.12);
+}
+
+.mat-header-cell {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.table-body{
+  background: #b1aeae  !important;
+}
+
+.info{
+  color: #3f51b5;
+  font-size: 25px;
+}
+
+

@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {StudentModule } from './../app/components/student/student.module';
+import {EmployeeManagementModule } from './../app/components/employee-management/employee-management.module';
 
 
 const routes: Routes = [
-  { path: 'student', loadChildren: './../app/components/student/student.module#StudentModule' },
-
-  { path: '**', loadChildren: './../app/components/student/student.module#StudentModule' },
-  { path: '', loadChildren: './../app/components/student/student.module#StudentModule' },
+  { path: 'employee', loadChildren: './../app/components/employee-management/employee-management.module#EmployeeManagementModule' },
+  { path: '**', loadChildren: './../app/components/employee-management/employee-management.module#EmployeeManagementModule' },
+  { path: '', loadChildren: './../app/components/employee-management/employee-management.module#EmployeeManagementModule' },
 
 ];
 

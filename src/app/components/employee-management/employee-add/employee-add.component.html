@@ -1,0 +1,32 @@
+<div class="form-layout">
+  <div class="card-header">
+   <h2> Add Employee</h2>
+  </div>
+  <div class="card mat-elevation-z8">
+    <mat-form-field class="example-full-width">
+    
+      <input type="number" matInput  placeholder="Employee ID" [(ngModel)]="employeeModel.id" class="form-control" name="employeeid" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+   
+      <input type="text" matInput  placeholder="Employee Name" [(ngModel)]="employeeModel.employee_name" class="form-control" name="employeename" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+     
+      <input type="number" matInput  placeholder="Employee Salary" [(ngModel)]="employeeModel.employee_salary" class="form-control" name="employeesalary" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+     
+      <input type="number" matInput  placeholder="Employee Age" [(ngModel)]="employeeModel.employee_age" class="form-control" name="employeeage" >
+    </mat-form-field>
+    <div >
+      <button mat-raised-button class="add-employee" (click)="addEmployee()">Add Employee</button>
+    </div>
+    
+  </div>
+  <div>
+    <a class="float-back" (click)="backToEmployeeList()">
+      <i class="fa fa-chevron-left my-float"></i>
+      </a>
+  </div>
+</div>
