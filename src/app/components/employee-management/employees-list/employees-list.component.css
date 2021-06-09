@@ -24,4 +24,19 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
   font-size: 25px;
 }
 
+.search
+{
+  float: right;
+}
+
+.search mat-form-field {
+  width: 156px;
+   margin-right: 16px;
+}
+
+.full-width-table th
+{
+  border-top: 1px solid #9c9999;
+}
+
 
