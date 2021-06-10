@@ -41,17 +41,6 @@ export class ApiService {
     return new Headers(headersConfig);
   }
 
-  setFileUploadHeaders(): HttpHeaders {
-    var token = localStorage.getItem("loginToken");
-    const headersConfig = {
-    }
-    if (token != null || token != undefined) {
-      headersConfig['Authorization'] = token;
-
-    }
-    return new HttpHeaders(headersConfig);
-  }
-
   private formatErrors(error: any) {
     const statusCode = error.status;
     const body = error.json();
