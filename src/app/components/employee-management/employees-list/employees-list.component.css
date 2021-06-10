@@ -31,7 +31,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .search mat-form-field {
-  width: 156px;
+  width: 200px;
    margin-right: 16px;
 }
 
