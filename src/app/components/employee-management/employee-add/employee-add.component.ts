@@ -21,10 +21,8 @@ export class EmployeeAddComponent implements OnInit {
 
   addEmployee()
   {
-    console.log(this.employeeModel);
     this.employeeManagementService.addEmployee(this.employeeModel).subscribe(
       res=>{
-        console.log(res);
         this.backToEmployeeList();
       }
     )

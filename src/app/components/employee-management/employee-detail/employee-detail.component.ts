@@ -13,17 +13,17 @@ export class EmployeeDetailComponent implements OnInit {
   employee:Employee;
   createdDate:string;
   updatedDate:string;
+
   constructor(private activatedRoute:ActivatedRoute,private router:Router,private employeeManagementService:EmployeeManagementService) {
+  
     this.activatedRoute.queryParams.subscribe(params => {
       this.employeeId = params["employeeId"];
     })
-
     this.employee=new Employee();
+    
    }
 
   ngOnInit(): void {
-
-    console.log(this.employeeId);
     this.getEmployeeDetail();
   }
 
@@ -31,13 +31,11 @@ export class EmployeeDetailComponent implements OnInit {
   {
     this.employeeManagementService.getEmployee(this.employeeId).subscribe(
       res=>{
-        console.log(res);
-        this.employee=res.data;
+         this.employee=res.data;
          this.createdDate=this.getDateFormat(this.employee.createdAt);
          this.updatedDate=this.getDateFormat(this.employee.updatedAt);
       }
     )
-   
   }
 
   getDateFormat(date:string)

@@ -37,7 +37,6 @@ export class EmployeesListComponent implements AfterViewInit, OnInit {
   {
     this.employeeManagementService.getAllEmployee().subscribe(
       (response: any)=>{
-        console.log(response,"list");
         this.dataSource.data = response.allEmployees;
       }
     )
@@ -55,7 +54,6 @@ export class EmployeesListComponent implements AfterViewInit, OnInit {
 
   employeeInfo(employeeDetail:Employee)
   {
-    console.log(employeeDetail);
     if(employeeDetail.id!=undefined)
     {
       this.router.navigate(['/employee/employee-detail'],{queryParams:{employeeId:employeeDetail.id}});
