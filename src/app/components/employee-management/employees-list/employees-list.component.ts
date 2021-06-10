@@ -6,6 +6,7 @@ import { EmployeesListDataSource, EmployeesListItem } from './employees-list-dat
 import { Employee } from 'src/app/model/employee.model';
 import {EmployeeManagementService} from './../../../service/Employee/employee-management.service';
 import { Router } from '@angular/router';
+import { AlertifyService } from 'src/app/service/Common/alertify.service';
 
 @Component({
   selector: 'app-employees-list',
@@ -20,7 +21,7 @@ export class EmployeesListComponent implements AfterViewInit, OnInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'employee_name','employee_salary','employee_age', 'action' ];
  
-  constructor(private router:Router,private employeeManagementService:EmployeeManagementService)
+  constructor(private router:Router,private employeeManagementService:EmployeeManagementService,private alertify:AlertifyService)
   {
 
   }
@@ -57,6 +58,9 @@ export class EmployeesListComponent implements AfterViewInit, OnInit {
     if(employeeDetail.id!=undefined)
     {
       this.router.navigate(['/employee/employee-detail'],{queryParams:{employeeId:employeeDetail.id}});
+    }
+    else{
+     this.alertify.error("Employee Id undefined. Please select valid employee");
     }
     
   }
